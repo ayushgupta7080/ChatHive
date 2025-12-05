@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>ChatHive</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="app">
+      <!-- Auth section -->
+      <div class="auth" id="auth-section">
+        <h1>ChatHive</h1>
+        <input id="username" placeholder="Username" />
+        <input id="password" type="password" placeholder="Password" />
+        <div class="buttons">
+          <button id="register-btn">Register</button>
+          <button id="login-btn">Login</button>
+        </div>
+        <p id="auth-error" class="error"></p>
+      </div>
+
+      <!-- Chat section -->
+      <div class="chat hidden" id="chat-section">
+        <!-- Sidebar: channels -->
+        <div class="sidebar">
+          <h2>Channels</h2>
+          <div id="channels"></div>
+          <input id="new-channel-name" placeholder="New channel name" />
+          <button id="create-channel-btn">Create</button>
+        </div>
+
+        <!-- Main chat area -->
+        <div class="main-chat">
+          <div class="chat-header">
+            <div>
+              <h2 id="current-channel-name">Select a channel</h2>
+              <!-- NEW: member count display -->
+              <div
+                id="member-count"
+                style="font-size: 12px; opacity: 0.7; margin-top: 2px"
+              >
+                0 members
+              </div>
+            </div>
+
+            <div class="chat-header-actions" style="display: flex; gap: 8px">
+              <!-- NEW: Leave channel button -->
+              <button id="leave-channel-btn">Leave Channel</button>
+              <button id="logout-btn">Logout</button>
+            </div>
+          </div>
+
+          <div id="messages"></div>
+          <button id="load-older-btn" class="hidden">
+            Load older messages
+          </button>
+          <div id="typing-indicator" class="typing"></div>
+
+          <div class="message-input">
+            <input id="message-input" placeholder="Type a message..." />
+            <button id="send-btn">Send</button>
+          </div>
+        </div>
+
+        <!-- Right bar: online users -->
+        <div class="rightbar">
+          <h2>Online users</h2>
+          <ul id="online-users"></ul>
+        </div>
+      </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

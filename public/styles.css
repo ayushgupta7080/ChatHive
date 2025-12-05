@@ -1,0 +1,160 @@
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: #0f172a;
+  color: #e5e7eb;
+}
+
+#app {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth,
+.chat {
+  background: #111827;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+.auth {
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.auth input {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #374151;
+  background: #020617;
+  color: #e5e7eb;
+}
+
+.auth .buttons {
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  background: #2563eb;
+  color: white;
+  font-weight: 500;
+}
+
+button:hover {
+  background: #1d4ed8;
+}
+
+.error {
+  color: #f97373;
+  min-height: 1.2em;
+}
+
+.hidden {
+  display: none;
+}
+
+.chat {
+  display: grid;
+  grid-template-columns: 220px 1fr 200px;
+  gap: 10px;
+  width: 900px;
+  height: 80vh;
+}
+
+.sidebar,
+.rightbar {
+  background: #020617;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+#channels {
+  max-height: 60vh;
+  overflow-y: auto;
+}
+
+.channel {
+  padding: 6px 8px;
+  border-radius: 6px;
+  margin-bottom: 4px;
+  cursor: pointer;
+}
+
+.channel.active {
+  background: #1f2937;
+}
+
+.main-chat {
+  display: flex;
+  flex-direction: column;
+  background: #020617;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.chat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+#messages {
+  flex: 1;
+  overflow-y: auto;
+  border-radius: 8px;
+  padding: 8px;
+  background: #020617;
+  border: 1px solid #1f2937;
+}
+
+.message {
+  margin-bottom: 6px;
+}
+
+.message .author {
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.message .time {
+  font-size: 0.7rem;
+  color: #9ca3af;
+}
+
+.message-input {
+  display: flex;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.message-input input {
+  flex: 1;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #374151;
+  background: #020617;
+  color: #e5e7eb;
+}
+
+.typing {
+  font-size: 0.8rem;
+  color: #9ca3af;
+  min-height: 1.2em;
+}
+
+#online-users {
+  list-style: none;
+  padding-left: 0;
+  font-size: 0.85rem;
+}
