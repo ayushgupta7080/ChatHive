@@ -362,4 +362,12 @@ JWT-based auth and refresh tokens for better security.
 
 You can tweak the wording slightly if you want, but this is already safe, honest, and assignment-focused.
 
----
+
+## 10. Deployed Application Links
+
+- **Live Application (Frontend + Backend)**  
+  https://chathive-rgob.onrender.com/
+
+- **Backend Base URL (for API routes)**  
+  https://chathive-rgob.onrender.com/api
+
